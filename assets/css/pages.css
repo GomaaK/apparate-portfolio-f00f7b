@@ -164,3 +164,6 @@ html{scroll-behavior:smooth}
 
 .pf-blank{background:var(--paper);min-height:clamp(120px,11vw,160px)}
 @media (max-width:760px){.pf-blank:nth-last-child(n+2){display:none}.pf-blank{min-height:112px}}
+.pf-wall.c5{grid-template-columns:repeat(3,minmax(0,1fr))}
+@media (max-width:1000px){.pf-wall.c5{grid-template-columns:repeat(3,minmax(0,1fr))}}
+@media (max-width:760px){.pf-wall.c5{grid-template-columns:repeat(3,minmax(0,1fr))}.pf-wall.c5 .pf-tile{padding:10px;height:104px}.pf-wall.c5 .pf-logo{max-height:44px}.pf-wall.c5 .pf-n{font-size:11px}}
