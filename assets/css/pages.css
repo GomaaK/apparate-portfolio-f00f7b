@@ -121,11 +121,11 @@ a.pg-card:hover .more svg{transform:translateX(4px)}
 .pf-tile::after{content:"";position:absolute;left:0;right:0;bottom:0;height:3px;background:linear-gradient(90deg,var(--magenta),var(--violet,#7B3FE4),var(--blue,#0A86FF));transform:scaleX(0);transform-origin:left;transition:transform .4s var(--ease)}
 .pf-tile.on::after,.pf-tile:hover::after{transform:scaleX(1)}
 .pf-hint{margin-top:14px;font-size:14.5px;color:var(--text-2)}
-body:has(.pf-brand:target) .pf-hint{display:none}
+
 .pf-panels{margin-top:46px;scroll-margin-top:90px}
-.pf-brand{display:none;scroll-margin-top:96px;padding-top:6px}
-.pf-brand:target{display:block;animation:pfin .5s var(--ease)}
-body:not(:has(.pf-brand:target)) .pf-brand.default{display:block}
+.pf-brand{display:block;scroll-margin-top:96px;padding-top:6px;margin-top:64px}
+.pf-brand:target .pf-head{box-shadow:inset 3px 0 0 var(--magenta);padding-left:18px}
+
 @keyframes pfin{from{opacity:0;transform:translateY(14px)}to{opacity:1;transform:none}}
 .pf-head{display:flex;align-items:center;gap:clamp(20px,3vw,44px);padding-bottom:6px;border-bottom:1px solid var(--line);margin-bottom:6px;flex-wrap:wrap}
 .pf-head .pf-logo.big{max-width:190px;max-height:84px;width:auto;height:auto;object-fit:contain}
@@ -147,3 +147,17 @@ body:not(:has(.pf-brand:target)) .pf-brand.default{display:block}
 .pf-part .pf-wall{margin-top:34px}
 .pf-tile.pf-df::before{content:"Our partner";position:absolute;top:10px;left:12px;font-size:11px;letter-spacing:.12em;text-transform:uppercase;font-weight:700;color:var(--magenta)}
 @media (max-width:760px){.pf-part-h .pf-logo.big{max-width:180px}}
+
+.pf-wall.c5{grid-template-columns:repeat(5,minmax(0,1fr))}
+@media (max-width:1000px){.pf-wall.c5{grid-template-columns:repeat(5,minmax(0,1fr))}.pf-wall.c5 .pf-tile{padding:14px}}
+@media (max-width:760px){.pf-wall.c5{grid-template-columns:repeat(2,minmax(0,1fr))}}
+.pf-tile.static{cursor:default}.pf-tile.static:hover{background:#fff}.pf-tile.static::after{display:none}.pf-tile.static:hover .pf-logo{transform:none}
+
+.pf-n{opacity:1!important;transform:none!important;color:var(--text-2)}.pf-n i{font-style:normal;margin-left:2px;color:var(--magenta)}
+.pf-panels{margin-top:30px}
+.pf-brand .pg-grid{margin-top:26px}
+.pf-note{margin-top:10px;font-size:15px}
+.pf-sub{display:none}
+html{scroll-behavior:smooth}
+@media (prefers-reduced-motion:reduce){html{scroll-behavior:auto}}
+.pf-tile.pf-df{padding-top:34px}
