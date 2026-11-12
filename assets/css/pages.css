@@ -161,3 +161,6 @@ a.pg-card:hover .more svg{transform:translateX(4px)}
 html{scroll-behavior:smooth}
 @media (prefers-reduced-motion:reduce){html{scroll-behavior:auto}}
 .pf-tile.pf-df{padding-top:34px}
+
+.pf-blank{background:var(--paper);min-height:clamp(120px,11vw,160px)}
+@media (max-width:760px){.pf-blank:nth-last-child(n+2){display:none}.pf-blank{min-height:112px}}
